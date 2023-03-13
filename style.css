@@ -67,13 +67,15 @@ ol li {
     font-size: 2rem;
     flex-wrap: wrap;
     margin: 20px;
+    background: linear-gradient(to right, purple, black);
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 input[type=checkbox] {
     transform: scale(3);
     float: right;
-    margin-left: 6vw;
-    margin-top: 3vh;
+    margin: 2vh 3vw 4vh 3vw;
 }
 
 @media screen and (max-width:480px) {
