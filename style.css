@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300&display=swap');
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-size: 62.5%;
+    text-decoration: none;
+}
+
+:root {
+    --main-color: #8F3BFF;
+    --bg-color-1: #201D25;
+    --bg-color-2: #201F35;
+    --font-color-1: #FFFFFF;
+    --font-color-2: #E2CBFF;
 }
 
 body {
-    background: linear-gradient(to right, black, purple);
+    background-color: var(--bg-color-1);
     font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
@@ -27,6 +38,7 @@ body {
 .container h1 {
     color: white;
     margin: 2vh 2vw;
+    font-size: 3rem;
 }
 
 .container input {
@@ -40,7 +52,7 @@ body {
 }
 
 .container input::placeholder {
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 .container button {
@@ -64,21 +76,47 @@ ol {
 }
 
 ol li {
-    font-size: 2rem;
-    flex-wrap: wrap;
-    margin: 20px;
-    background: linear-gradient(to right, purple, black);
-    padding: 1rem;
+    font-size: 2.5rem;
+    margin: 2rem;
+    background-color: var(--bg-color-2);
+    padding: 5rem 5rem 3rem 10rem;
     border-radius: 1rem;
+    position: relative;
 }
 
 input[type=checkbox] {
-    transform: scale(3);
-    float: right;
-    margin: 2vh 3vw 4vh 3vw;
+    transform: scale(2);
+    float: left;
+    margin: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-@media screen and (max-width:480px) {
+#trashCan i {
+    display: none;
+}
+
+.bxs-trash {
+    font-size: 2vw;
+}
+
+.dltKey {
+    padding: .5rem;
+    float: right;
+    border: none;
+    border-radius: .8rem;
+    background-color: var(--bg-color-2);
+    color: white;
+    cursor: pointer;
+    width: 5%;
+    position: absolute;
+    top: 5;
+    left: 0;
+    margin-top: 1rem;
+}
+
+@media (max-width:480px) {
     .container {
         width: 90vw;
     }
@@ -91,15 +129,27 @@ input[type=checkbox] {
         padding: .5rem 0;
     }
     .list-items {
-        width: 90vw;
+        width: 100%;
     }
     .list-items ol li {
         font-size: 1.6rem;
         text-align: left;
     }
     input[type=checkbox] {
-        transform: scale(2);
+        transform: scale(1.5);
         margin-top: 1.6vh;
         margin-left: 8vw;
+    }
+    .bxs-trash {
+        font-size: 7.5vw;
+        margin-left: 1.6rem;
+    }
+    input[type=checkbox] {
+        transform: scale(2);
+        float: left;
+        margin: 3rem;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }
